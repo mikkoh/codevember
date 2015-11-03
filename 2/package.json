@@ -23,11 +23,13 @@
     "mouse-position": "^2.0.0"
   },
   "devDependencies": {
+    "brfs": "^1.4.1",
     "glslify": "^2.3.1"
   },
   "browserify": {
     "transform": [
-      "glslify"
+      "glslify",
+      "brfs"
     ]
   }
 }

@@ -1,4 +1,5 @@
 var glslify = require('glslify');
+var fs = require('fs');
 var glNow = require('gl-now');
 var glShader = require('gl-shader');
 var glVao = require('gl-vao');
@@ -39,7 +40,8 @@ var texture;
 var image;
 
 image = new Image();
-image.src = 'texture.jpg';
+image.src = fs.readFileSync(__dirname + '/image.data', 'utf8');
+image.crossOrigin = "Anonymous";
 image.onload = function() {
 
   shell = glNow();
